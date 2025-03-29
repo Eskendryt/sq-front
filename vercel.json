@@ -1,5 +1,5 @@
 {
-  "vercel" : {
+  
     "rewrites": [
       {
         "source": "/user/:path*",
@@ -10,5 +10,5 @@
         "destination": "https://sq-backend.onrender.com/books/:path*"
       }
     ]
-  }
+  
 }
