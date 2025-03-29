@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useSnackbar } from "notistack";
 import axiosInstance from "../services";
 
@@ -9,6 +9,7 @@ const Login = () => {
 
 
   const { enqueueSnackbar } = useSnackbar();
+  const navigate = useNavigate();
 
 
 
