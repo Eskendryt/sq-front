@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSnackbar } from "notistack";
 import axiosInstance from "../services";
 
@@ -7,16 +7,11 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigate = useNavigate();
+
   const { enqueueSnackbar } = useSnackbar();
 
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      navigate("/home");
-    }
-  }, [navigate]);
+
 
   const handleLogin = (e) => {
     e.preventDefault();
